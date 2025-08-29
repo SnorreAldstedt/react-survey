@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnswersList from "./AnswersList";
 
 function Survey() {
 
@@ -21,9 +22,6 @@ function Survey() {
     if (type === "checkbox") {
       setSurveyData({ ...surveyData, [name]: event.target.checked });
     }
-    /*else if (type === "radio"){
-      setSurveyData({ ...surveyData, [name]: event.target.value});
-    }*/
     else {
       setSurveyData({ ...surveyData, [event.target.name]: event.target.value });
     }
@@ -67,23 +65,7 @@ function Survey() {
 
   return (
     <main className="survey">
-      <section className={`survey__list ${open ? "open" : ""}`}>
-        <h2>Answers list</h2>
-        <div className="table-responsive">
-            {answersList.map((v) => (
-              <div className="answer-div" key={v.id}> 
-                <h3>{v.username} said: </h3>
-                <br/>
-                <p>How do you rate your rubber duck colour?</p>
-                <p>&emsp; {v.colourRating}</p>
-                <p>How do you like to spend time with your rubber duck</p>
-                <p>&emsp; Likes to: {v.bathing ? "Bath, ": ""}{v.swimming ? "Swim, ": ""}{v.chatting ? "Chat, ": ""}{v.noTime ? "Do nothing, ": ""} with the rubber duck</p>
-                <p>Other Thoughts:</p>
-                <p>&emsp; {v.review}</p>
-              </div>  
-            ))} 
-        </div>
-      </section>
+      <AnswersList answersList={answersList}/>
       <form className="form" onSubmit={handleSubmit}>
           <h2>Tell us what you think about your rubber duck!</h2>
           <h3>How do you rate your rubber duck colour?</h3>
