@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React from "react";
 
 function Survey() {
 
@@ -74,6 +73,7 @@ function Survey() {
             {answersList.map((v) => (
               <div className="answer-div" key={v.id}> 
                 <h3>{v.username} said: </h3>
+                <br/>
                 <p>How do you rate your rubber duck colour?</p>
                 <p>&emsp; {v.colourRating}</p>
                 <p>How do you like to spend time with your rubber duck</p>
