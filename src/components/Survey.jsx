@@ -75,14 +75,14 @@ function Survey() {
           <div className="form_group">
             <ul>
               <li>
-                <label
-                  ><input
+                <label>
+                  <input
                     name="swimming"
                     type="checkbox"
                     onChange={handleChange}
-                    checked={surveyData.swimming}
-                  />Swimming</label
-                >
+                    checked={surveyData.swimming}/>
+                  Swimming
+                </label>
               </li>
               <li>
                 <label>
