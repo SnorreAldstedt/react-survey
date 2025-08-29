@@ -66,6 +66,7 @@ h2 {
   transition: width 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   box-shadow: var(--survey-shadow);
   background-color: var(--background-two);
+  
 }
 
 .survey__list.open {
@@ -196,3 +197,24 @@ h2 {
 .form__submit:hover {
   background-color: white;
 }
+
+.answer-div{
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  background-color: rgb(255, 194, 250);
+
+}
+.
+/*
+.survey__form {
+  background-color: var(--background-two);
+  border-radius: 20px;
+  margin: 4rem 0;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: var(--survey-shadow);
+}
+  */
